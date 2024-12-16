@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <style>
+        body {
+            margin: 2;
+        }
+        .classe1 {
+            display: grid;
+        }
+        header {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: rgb(252, 250, 250);
+        }
+        .menuprincipal {
+            grid-column-start: 10;
+            grid-column-end: 18;
+            gap: 30px;
+            display: flex;
+            float: left;
+            /* grid-template-columns: 100px 150px 100px 200px; */
+            /* grid-template-rows: 50px 45px 180px 50px; */
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 25%;
+        }
+        .imagem_livro {
+            grid-column-start: 1;           /* classe da imagem no portifolio */
+            grid-column-end: 3;
+
+        }
+        .imagem_minha {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            text-align: center;
+            display: flex;
+
+        }
+        .fonte {
+            font-size: 4rem;
+            color:white;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            
+
+        }
+       
+        .sobre_portifolio {
+            grid-column-start: 8;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;            /* classe principal do portifolio */
+            text-align: justify;
+        }
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: black;              /*  footer e a parte de baixo do nosso site */
+            color: white;
+            text-align: left;                 /* texto que vai ficar no footer */
+        }
+        ul {
+            list-style-type: none;
+            color: #33ff33;          /* esse trecho do codigo vai ser uma lista nao ordenada no meu portifolio*/
+        }
+        a,                 /* seleciona todos os links */
+        a:link {                           /* seleciona somente os links nao visitados */
+            text-decoration: none;          /* remove toda a decoracao do link */
+            padding: 30px 50px;              /* espacamento interno do link*/
+            border:solid #3333ff 8px;       /* usamos esse trecho de codigo para links normais e links nao visitados*/
+            text-align: justify;
+        }
+
+        li {
+            float: left;
+        }
+        a:hover {
+            background-color: #0000ff;      /* classe das bordas do menu */
+            color: white;
+        }
+        body {
+            background-color:white;
+            margin: 0;
+            padding: 0;
+        }
+        @media only screen and (max-whidt:768px){
+            .wrapper {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+        img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }       
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div style="float: left; width: 400%;">
+            <img src="fundo-roxo-escuro19.png" style="margin: 1rem;" width="2500" height="585">
+        </div>
+        
+        <p class="fonte" > Portfolio Profissional <br> Manoel Vinicius Messias Portugal</p>
+        <br>
+        <h1 style="color:white; text-align: center; margin: 2; padding: auto; border: 2px solid #333; background-color: black;" > Para mais informacões segue no menu: </h1>
+        <br>
+
+
+    </header>
+    <nav class="menuprincipal">
+        <img src="imagem_livro.png" alt="imagem_livro" style="width: 20%; height: 20%; display: block; float: left;">
+        
+        <ul>
+            <li><a href="biografia.html">sobre mim</a></li>
+            <li><a href="escolaridade.html">formação</a></li>
+            <li><a href="portifolio.html">portfolio</a></li>
+            <li><a href="contato.html">contatos</a></li>
+        </ul>
+      
+
+        
+    </nav>
+    
+</body>
+</html>
