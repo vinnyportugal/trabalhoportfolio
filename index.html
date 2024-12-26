@@ -5,132 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index.html</title>
     <style>
-        body {
-            margin: 2;
-        }
-        .classe1 {
-            display: grid;
-        }
-        header {
-            grid-column-start: 1;
-            grid-column-end: 12;
-            background-color: rgb(252, 250, 250);
-        }
-        .menuprincipal {
-            grid-column-start: 10;
-            grid-column-end: 18;
-            gap: 30px;
-            display: flex;
-            float: left;
-            /* grid-template-columns: 100px 150px 100px 200px; */
-            /* grid-template-rows: 50px 45px 180px 50px; */
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 25%;
-        }
-        .imagem_livro {
-            grid-column-start: 1;           /* classe da imagem no portifolio */
-            grid-column-end: 3;
-
-        }
-        .imagem_minha {
-            grid-column-start: 2;
-            grid-column-end: 3;
-            text-align: center;
-            display: flex;
-
-        }
-        .fonte {
-            font-size: 4rem;
-            color:white;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            
-
-        }
-       
-        .sobre_portifolio {
-            grid-column-start: 8;
-            grid-column-end: 12;
-            padding-left: 15px;
-            padding-right: 15px;            /* classe principal do portifolio */
-            text-align: justify;
-        }
-        footer {
-            grid-column-start: 1;
-            grid-column-end: 12;
-            background-color: black;              /*  footer e a parte de baixo do nosso site */
-            color: white;
-            text-align: left;                 /* texto que vai ficar no footer */
-        }
-        ul {
-            list-style-type: none;
-            color: #33ff33;          /* esse trecho do codigo vai ser uma lista nao ordenada no meu portifolio*/
-        }
-        a,                 /* seleciona todos os links */
-        a:link {                           /* seleciona somente os links nao visitados */
-            text-decoration: none;          /* remove toda a decoracao do link */
-            padding: 30px 50px;              /* espacamento interno do link*/
-            border:solid #3333ff 8px;       /* usamos esse trecho de codigo para links normais e links nao visitados*/
-            text-align: justify;
-        }
-
-        li {
-            float: left;
-        }
-        a:hover {
-            background-color: #0000ff;      /* classe das bordas do menu */
-            color: white;
-        }
-        body {
-            background-color:white;
+        * {
             margin: 0;
-            padding: 0;
+            padding: 0;                             /* reseta estilos basicos */
+            box-sizing: border-box;
         }
-        @media only screen and (max-whidt:768px){
-            .wrapper {
-                grid-column-start: 1;
-                grid-column-end: 1;
+    
+        body {
+            font-family: Arial,sans-serif;
+        }
+    
+        /* essas duas funcoes seguidas sao da faixa de cima do portifolio */
+        .navbar {
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            background:#333;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar .logo {
+            font-size: 1.5em;
+        }
+    
+        .menu {
+            list-style: none;
+            display: block;
+            gap: 15px;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+    
+        .menu li a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+    
+        /* esconde o menu em telas pequenas */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            background:#333;
+            position: block;
+            top: 60px;
+            right: 20px;
+            border-radius: 5px;
+            width: 150px;
+        }
+        .menu li {
+            text-align: center;
+            margin: 5px 0;
+        }
+    
+        /* botao de alternancia (hamburguer menu) 
+        .menu-toggle {
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }           */
+    
+        /* estilos para telas pequenas */
+    
+        @media (max-width: 768px) {
+            .menu {
+                display:flex;
+            }
+            .menu.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
             }
         }
+            /*  funcao de respansividade de imagens */
         img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-    }       
+            display: block;
+            margin: 5;                              /* funcao de responsividade da imagem */
+            max-width: 100%;
+        }
+        .font {
+            color:black;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+            float: left;
+            padding: 3%; 
+        }
+        .font2 {
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            float: left;
+            margin: 1 rem;
+            
+        }  
+        </style>
+    <body>
+        <nav class="navbar">
+            <div class="logo"> portifolio profissional </div>
+            <img src="imagem_livro.png" alt="imagem_livro" style="width: 20% ; height:20%; display:block; text-align:center">
+            <ul class="menu">
+                <li><a href="biografia.html"> sobre mim</a></li>
+                <li><a href="escolaridade.html"> formação</a></li>
+                <li><a href="portifolio.html"> portifolio</a></li>
+                <li><a href="contato.html"> contatos</a></li>
+            </ul>
+        </nav>
+    </body>
+    <h1 style="color:white; text-align:center; margin:2; padding: auto; border:2px solid #333; background-color:black;"> seja bem vindo!</h1>
+    <div class="img">
+        <img src="viny2.png" alt="viny" style=" width: 20% ; height:20% ; float:left" >
+        <h1 class="font"> ➮ olá, meu nome é manoel vinicius messias portugal, e esse é meu portifolio profissional.</h1>
+    </div>
+    <div>
+        <p class="font2"> ✅ sobre mim? pagina dedicada as minha vida tanto pessoal quanto profissional.</p>
+        <p class="font2"> ✅ formação? pagina dedicada as minhas formações academicas e profissionais.</p>
+        <p class="font2"> ✅ portifolio? pagina dedicada as meus projetos, habilidades, softs keys e futuro.</p>
+        <p class="font2"> ✅ contatos? pagina dedicada aos meus contatos como email-s, GitHub e Linkdin.</p>
+    </div>
+    </head>
+    <script>
 
-
-    </style>
-</head>
-<body>
-    <header>
-        <div style="float: left; width: 400%;">
-            <img src="fundo-roxo-escuro19.png" style="margin: 1rem;" width="2500" height="585">
-        </div>
         
-        <p class="fonte" > Portfolio Profissional <br> Manoel Vinicius Messias Portugal</p>
-        <br>
-        <h1 style="color:white; text-align: center; margin: 2; padding: auto; border: 2px solid #333; background-color: black;" > Para mais informacões segue no menu: </h1>
-        <br>
-
-
-    </header>
-    <nav class="menuprincipal">
-        <img src="imagem_livro.png" alt="imagem_livro" style="width: 20%; height: 20%; display: block; float: left;">
+    </script>       
         
-        <ul>
-            <li><a href="biografia.html">sobre mim</a></li>
-            <li><a href="escolaridade.html">formação</a></li>
-            <li><a href="portifolio.html">portfolio</a></li>
-            <li><a href="contato.html">contatos</a></li>
-        </ul>
-      
-
-        
-    </nav>
     
 </body>
 </html>

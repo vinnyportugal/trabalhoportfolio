@@ -5,86 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portifolio.html</title>
     <style>
-        .menuprincipal {
-            grid-column-start: 10;
-            grid-column-end: 18;
-            justify-content: left;                        /* centraliza o menu na pagina */
-            text-align: left;
-            gap: 50px;
-           
+        * {
+            margin: 0;
+            padding: 0;                             /* reseta estilos basicos */
+            box-sizing: border-box;
         }
-        .imagemfundoportfolio {
-            position: relative;
+    
+        body {
+            font-family: Arial,sans-serif;
         }
-        .fonte_imagemfundoportfolio {
-            position: absolute;
-            top: 10%;
-            left: 30%;
-            transform: translate(-10%,-10%);
-            color: black;
+    
+        /* essas duas funcoes seguidas sao da faixa de cima do portifolio */
+        .navbar {
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            background:#333;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar .logo {
+            font-size: 1.5em;
+        }
+    
+        .menu {
+            list-style: none;
+            display: block;
+            gap: 15px;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+    
+        .menu li a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+    
+        /* esconde o menu em telas pequenas */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            background:#333;
+            position: block;
+            top: 60px;
+            right: 20px;
+            border-radius: 5px;
+            width: 150px;
+        }
+        .menu li {
             text-align: center;
-            margin: 1rem;
+            margin: 5px 0;
         }
-        .classe_bolinha {
-            top: 15%;
-            left: 15%;
-            transform: translate(0% , 0%);
-            text-align: left;
+        @media (max-width: 768px) {
+            .menu {
+                display:flex;
+            }
+            .menu.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
+            }
         }
-        .imagem_livro {
-            top: 10%;
-            right: 10%;
-            transform: translate(-30%,-30%);
-            width: 10%;
-            height: 10%;
-            text-align: right;
-            margin: 1rem;
+            /*  funcao de respansividade de imagens */
+        img {
+            display: block;
+            margin: 5;                              /* funcao de responsividade da imagem */
+            max-width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <h1 style="color: white; text-align: center; border: 2px solid #333; background-color: black;"> portfolio </h1><br><br>
-    <br><br>
+    <nav class="navbar">
+        <div class="logo">portifolio profissional </div>
+        <img src="imagemfundoportfolio.png" alt="imagem de logo" style="width: 20%; height:20%; display:block ; text-align:center">
+        <ul class="menu">
+            <li><a href="index.html">index</a></li>
+            <li><a href="biografia.html">sobre mim</a></li>
+            <li><a href="escolaridade.html">formação</a></li>
+            <li><a href="contato.html">contatos</a></li>
+        </ul>
+    </nav>
     <header>
-        <div class="imagemfundoportfolio">
-            <img src="imagemfundoportfolio.png" alt="imagemfundo" style=" width: 100%; height: 40%;">
+        <h1 style="color: white; text-align:center; margin: 2; padding: auto; border:2px solid #333; background-color:black"> mais sobre mim </h1>
             <div class="fonte_imagemfundoportfolio">
             <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > Projetos: </h2>
-            <p class="classe_bolinha"> .Meus projetos sao pessoais, nenhum Profissional ainda!</p>
-            <p class="classe_bolinha" > .Um programa em python de cadastro de livros pessoais que tenho, nesse programa eu consigo cadastrar, consultar e remover livros em um database que tenho!</p>
-            <p class="classe_bolinha" > .Tenho um database e um codigo em python que cadastro livros que irei comprar futuramente, porem e menos complexo que o outro!</p>
-            <p class="classe_bolinha" > .Tenho um quiz sobre harry potter tambem codificado em python!</p>
-            <p class="classe_bolinha" > .Um programa de super herois favoritos tambem com um database!</p>
-            <p class="classe_bolinha" > .Desse, em desenvolvimento web tenho um site que fala sobre o batman, seus viloes e curiosidades. codificado em HTML e CSS!</p>
-            <p class="classe_bolinha"> .Sao alguns dos meus projetos pessoais!</p>
+            <p> .Meus projetos sao pessoais, nenhum Profissional ainda!</p>
+            <p > .Um programa em python de cadastro de livros pessoais que tenho, nesse programa eu consigo cadastrar, consultar e remover livros em um database que tenho!</p>
+            <p > .Tenho um database e um codigo em python que cadastro livros que irei comprar futuramente, porem e menos complexo que o outro!</p>
+            <p > .Tenho um quiz sobre harry potter tambem codificado em python!</p>
+            <p > .Um programa de super herois favoritos tambem com um database!</p>
+            <p > .Desse, em desenvolvimento web tenho um site que fala sobre o batman, seus viloes e curiosidades. codificado em HTML e CSS!</p>
+            <p "> .Sao alguns dos meus projetos pessoais!</p>
             <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > Soft keys: </h2>
-            <p class="classe_bolinha"> .Trabalho muito bem em equipe e ja tenho essa experiecia em equipe! </p>
-            <p class="classe_bolinha"> .Vontade de trabalhar com programacao e aprender sempre mais! </p>
-            <p class="classe_bolinha"> .Sempre estar procurando aprender mais sobre tudo! </p>
+            <p > .Trabalho muito bem em equipe e ja tenho essa experiecia em equipe! </p>
+            <p > .Vontade de trabalhar com programacao e aprender sempre mais! </p>
+            <p > .Sempre estar procurando aprender mais sobre tudo! </p>
             <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > Habilidades: </h2>
-            <p class="classe_bolinha"> .Programador voltado mais para o back-end!</p>
-            <p class="classe_bolinha"> .Apredendo tambem mais sobre front-end!</p>
-            <p class="classe_bolinha"> .Linguagem que mais ultilizo e Python e SQL!</p>
-            <p class="classe_bolinha"> .Nivel Intermediario tanto para Python quanto para SQL!</p>
+            <p > .Programador voltado mais para o back-end!</p>
+            <p > .Apredendo tambem mais sobre front-end!</p>
+            <p > .Linguagem que mais ultilizo e Python e SQL!</p>
+            <p > .Nivel Intermediario tanto para Python quanto para SQL!</p>
             <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > Futuro: </h2>
-            <p class="classe_bolinha"> .Pretendo primeiramente trabalhar com dados, podendo ser um cientista de dados!</p>
-            <p class="classe_bolinha"> .Tambem entrar na area de IA!</p>
+            <p > .Pretendo primeiramente trabalhar com dados, podendo ser um cientista de dados!</p>
+            <p > .Tambem entrar na area de IA!</p>
             <br><br><br>
             <h2 style="color: #333; text-align: left;"> Atualmente estudo muito para conquistar esses objetivos!</h2>
             <h2 style="color: #333;text-align: left;"> Trabalho voltado a fins academicos! </h2>
-            <nav class="menuprincipal">
-                <ul>
-                    <li><a href="index.html">index</a></li>
-                    <li><a href="biografia.html">sobre mim</a></li>
-                    <li><a href="escolaridade.html">formação</a></li>
-                    <li><a href="contato.html">contatos</a></li>
-                </ul>
-                
-            </nav>
-            </div>
-            </div>
-        </div>
+
         </header>
        
 </body>
