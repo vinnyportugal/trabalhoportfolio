@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contato.html</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;                             /* reseta estilos basicos */
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial,sans-serif;
+        }
+    
+        /* essas duas funcoes seguidas sao da faixa de cima do portifolio */
+        .navbar {
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            background:#333;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar .logo {
+            font-size: 1.5em;
+        }
+    
+        .menu {
+            list-style: none;
+            display: block;
+            gap: 15px;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+    
+        .menu li a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+    
+        /* esconde o menu em telas pequenas */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            background:#333;
+            position: block;
+            top: 60px;
+            right: 20px;
+            border-radius: 5px;
+            width: 150px;
+        }
+        .menu li {
+            text-align: center;
+            margin: 5px 0;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display:flex;
+            }
+            .menu.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+        }
+            /*  funcao de respansividade de imagens */
+        img {
+            display: block;
+            margin: 5;                              /* funcao de responsividade da imagem */
+            max-width: 100%;
+        }
+        .font {
+            color:black;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+            float: left;
+            padding: 3%; 
+        }
+    </style>
+
+</head>
+<body> 
+    <nav class="navbar" >
+        <div class="logo"> portigolio profissional </div>
+    <ul class="menu">
+        <li><a href="index.html">index</a></li>
+        <li><a href="biografia.html">sobre mim</a></li>
+        <li><a href="escolaridade.html">formação</a></li>
+        <li><a href="portifolio.html">portfolio</a></li>
+        
+    </ul>
+</nav>
+        <div class="body"></div>
+        <div class="fonte_imagemfundo"></div>
+        <h1 style="color:white; text-align:center; margin:2; padding:auto; border:2px solid #333 ; background-color:black">contatos</h1>
+            <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > email: </h2>
+            <ul>
+                <img src="gmaillogo.png" alt="gmaillogo" style="width: 5%; right: 5%;display: block;float: right; ">
+                <a href=>viniportugal0@gmail.com</a> <br>
+                <a href=>viniportugal42@gmail.com</a>
+            </ul>
+            <br><br><br>
+            <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > github: </h2>
+            <ul>
+                <img src="githublogo.png" alt="githublogo" style="width: 5%; right: 5%; display: block; float: right;">
+                <a href=>github.com/vinnyportugal/</a> <br>
+            </ul>
+            <br><br><br>
+            <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > linkedin: </h2>
+            <ul>
+                <img src="linkedinlogo.png" alt="linkedinlogo" style="width: 5%; right: 5%;display: block; float: right;">
+                <a href=>https://www.linkedin.com/</a>
+                <p> vinicius portugal </p>
+            </ul>
+            <br><br>
+            <h2 style="color: blue ; text-align: left; border: 1px solid red; background-color: red;" > Entre em contato comigo: </h2>
+<form action="" method="">
+    <table>
+        <tr>
+            <th><label for="nome">Nome:</label></th>
+            <td><input type="text" name="nome" id="nome"></td>
+        </tr>
+        <tr>
+            <th><label for="email">Email:</label></th>
+            <td><input type="email" name="email" id="email"></td>
+        </tr>
+        <tr> 
+            <th><label for="mensagem">digite sua mensagem:</label></th>
+            <td><textarea name="mensagem" rows="5" cols="40">digite sua mensagem</textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <button>Enviar</button></td>
+        </tr>
+    </table>
+</form>
+ 
+</body>
+</html>
